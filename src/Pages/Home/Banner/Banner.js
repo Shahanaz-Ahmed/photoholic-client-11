@@ -53,7 +53,6 @@ const Banner = () => {
       {bannerData.map((slide) => (
         <BannerItem key={slide.id} slide={slide}></BannerItem>
       ))}
-      {/* <BannerItem image={img6}></BannerItem> */}
     </div>
   );
 };
