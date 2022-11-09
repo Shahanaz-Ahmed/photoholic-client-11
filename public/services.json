@@ -1,0 +1,200 @@
+[
+    {
+        "service_id": "01",
+        "title": "Wedding Photography",
+        "img": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "price": "20.00",
+        "rating" : "4.5",
+        "description": "Designed to provide a stress-free planning experience and allow couple to focus on capturing a lifetime of happiness together. This comprehensive package includes everything from initial concept discovery to day-of execution, and every intricate detail in between of a wedding.",
+        "facility": [
+            {
+                "cinematography":"Cinematography Services are also available ,  Additional Motion unit , Service Hours, Post Production as well as some extra facilities.Prices are mentioned in BDT.",
+                "Super Saver" : "12,500~ 25,000",
+                "Standard" : "15,000~ 35,000",
+                "Exclusive" : "50,000 ~ 75,000", 
+                "Premium & Signature" : "1,25,000 ~ 2,00,000"
+            },
+            {
+                "Photography": "Photography is the main attraction of photoHolic, Service Hours, Number of prints as well as some extra facilities.Prices are mentioned in BDT",
+                 "Super Saver" : "12,500~ 22,500",
+                 "Standard" : "30,000~ 40,000",
+                 "Elegant" : "40,000 ~ 1,00,000",
+                 "Exclusive" : "55,000 ~ 75,000",
+                 "Premium & Signature" : "1,00,000 ~ 2,25,000"
+            }
+        ]
+    },
+    {
+        "service_id": "02",
+        "title": "Academic",
+        "img": "https://images.unsplash.com/photo-1519070994522-88c6b756330e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=997&q=80",
+        "price": "20.00",
+        "rating" : "4.4",
+        "description": "It is no surprise that intellectual growth and development are at the heart of a University education. Challenging students to think critically and broadly will happen in all disciplines.So, when it comes to happening moments like farewell , rag day ,convocation or any type of academic events, try to capture their best of memories",
+        "facility": [
+            {
+                "cinematography":"Cinematography Services are also available ,  Additional Motion unit , Service Hours, Post Production as well as some extra facilities.Prices are mentioned in BDT.",
+                "Super Saver" : "12,500~ 25,000",
+                "Standard" : "15,000~ 35,000",
+                "Exclusive" : "50,000 ~ 75,000", 
+                "Premium & Signature" : "1,25,000 ~ 2,00,000"
+            },
+            {
+                "Photography": "Photography is the main attraction of photoHolic, Service Hours, Number of prints as well as some extra facilities.Prices are mentioned in BDT",
+                 "Super Saver" : "12,500~ 22,500",
+                 "Standard" : "30,000~ 40,000",
+                 "Elegant" : "40,000 ~ 1,00,000",
+                 "Exclusive" : "55,000 ~ 75,000",
+                 "Premium & Signature" : "1,00,000 ~ 2,25,000"
+            }
+        ]    },
+    {
+        "service_id": "03",
+        "title": "Fashion",
+        "img": "https://images.unsplash.com/photo-1627577279497-4b24bf1021b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80",
+        "price": "200.00",
+        "rating" : "4.6",
+        "description": "Fashion and Photography are two related to each other.Photography gives Fashion a new wing.Fashion is a form of self-expression and autonomy at a particular period and place and in a specific context, of clothing, footwear, lifestyle, accessories, makeup, hairstyle, and body posture.[1] The term implies a look defined by the fashion industry as that which is trending. Everything that is considered fashion is available and popularized by the fashion system (industry and media).",
+        "facility": [
+            {
+                "cinematography":"Cinematography Services are also available ,  Additional Motion unit , Service Hours, Post Production as well as some extra facilities.Prices are mentioned in BDT.",
+                "Super Saver" : "12,500~ 25,000",
+                "Standard" : "15,000~ 35,000",
+                "Exclusive" : "50,000 ~ 75,000", 
+                "Premium & Signature" : "1,25,000 ~ 2,00,000"
+            },
+            {
+                "Photography": "Photography is the main attraction of photoHolic, Service Hours, Number of prints as well as some extra facilities.Prices are mentioned in BDT",
+                 "Super Saver" : "12,500~ 22,500",
+                 "Standard" : "30,000~ 40,000",
+                 "Elegant" : "40,000 ~ 1,00,000",
+                 "Exclusive" : "55,000 ~ 75,000",
+                 "Premium & Signature" : "1,00,000 ~ 2,25,000"
+            }
+        ]
+    },
+    {
+        "service_id": "04",
+        "title": "Sports",
+        "img": "https://images.unsplash.com/photo-1628779238951-be2c9f2a59f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80",
+        "price": "150.00",
+        "rating" : "4.5",
+        "description": "Sports photography is a type of photography that covers every sport and sporting event, capturing the action of a game and behind the scenes of the players. This type of photography helps to promote brands, the players, as well as the sport.",
+        "facility": [
+            {
+                "cinematography":"Cinematography Services are also available ,  Additional Motion unit , Service Hours, Post Production as well as some extra facilities.Prices are mentioned in BDT.",
+                "Super Saver" : "12,500~ 25,000",
+                "Standard" : "15,000~ 35,000",
+                "Exclusive" : "50,000 ~ 75,000", 
+                "Premium & Signature" : "1,25,000 ~ 2,00,000"
+            },
+            {
+                "Photography": "Photography is the main attraction of photoHolic, Service Hours, Number of prints as well as some extra facilities.Prices are mentioned in BDT",
+                 "Super Saver" : "12,500~ 22,500",
+                 "Standard" : "30,000~ 40,000",
+                 "Elegant" : "40,000 ~ 1,00,000",
+                 "Exclusive" : "55,000 ~ 75,000",
+                 "Premium & Signature" : "1,00,000 ~ 2,25,000"
+            }
+        ]
+    },
+    {
+        "service_id": "05",
+        "title": "Haldi & Henna",
+        "img": "https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "price": "30.00",
+        "rating" : "4.6",
+        "description": "Full Photo With Editing·Photo Book Album 200 Copy.Digital copy delivered in USB flash drive.Wedding film delivered in USB flash drive Approx. 400 edited High Resolution images (with print rights) Online gallery with processed photos for viewing, sharing, and printing Digital download delivery",
+        "facility": [
+            {
+                "cinematography":"Cinematography Services are also available ,  Additional Motion unit , Service Hours, Post Production as well as some extra facilities.Prices are mentioned in BDT.",
+                "Super Saver" : "12,500~ 25,000",
+                "Standard" : "15,000~ 35,000",
+                "Exclusive" : "50,000 ~ 75,000", 
+                "Premium & Signature" : "1,25,000 ~ 2,00,000"
+            },
+            {
+                "Photography": "Photography is the main attraction of photoHolic, Service Hours, Number of prints as well as some extra facilities.Prices are mentioned in BDT",
+                 "Super Saver" : "12,500~ 22,500",
+                 "Standard" : "30,000~ 40,000",
+                 "Elegant" : "40,000 ~ 1,00,000",
+                 "Exclusive" : "55,000 ~ 75,000",
+                 "Premium & Signature" : "1,00,000 ~ 2,25,000"
+            }
+        ]    },
+    {
+        "service_id": "06",
+        "title": "Abroad/Travel",
+        "img": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "price": "20.00",
+        "rating" : "4.7",
+        "description": "Some people collect souvenirs when they travel, I prefer to collect beautiful images with my camera.Travel photography is like a time machine, freezing memories from a journey that you can look back on and enjoy for years. Plus it can help others find new inspiration.Every travel destination has its own look, culture, history, people, feelings, landscapes, and stories.",
+        "facility": [
+            {
+                "cinematography":"Cinematography Services are also available ,  Additional Motion unit , Service Hours, Post Production as well as some extra facilities.Prices are mentioned in BDT.",
+                "Super Saver" : "12,500~ 25,000",
+                "Standard" : "15,000~ 35,000",
+                "Exclusive" : "50,000 ~ 75,000", 
+                "Premium & Signature" : "1,25,000 ~ 2,00,000"
+            },
+            {
+                "Photography": "Photography is the main attraction of photoHolic, Service Hours, Number of prints as well as some extra facilities.Prices are mentioned in BDT",
+                 "Super Saver" : "12,500~ 22,500",
+                 "Standard" : "30,000~ 40,000",
+                 "Elegant" : "40,000 ~ 1,00,000",
+                 "Exclusive" : "55,000 ~ 75,000",
+                 "Premium & Signature" : "1,00,000 ~ 2,25,000"
+            }
+        ]
+    },
+    {
+        "service_id": "07",
+        "title": "Bridal Shower",
+        "img": "https://images.unsplash.com/photo-1503315082045-a2bfb5e7f56e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+        "price": "20.00",
+        "rating" : "4.7",
+        "description": "Typically held around a month or so before she embarks on her journey up the aisle, a bridal shower is a celebration that is all about the bride. This party is filled with photo ops, but it can be difficult to ensure that you get every shot you want.the beauty is often in the details, and this can be a great way to capture the unique vibe of the event.",
+        "facility": [
+            {
+                "cinematography":"Cinematography Services are also available ,  Additional Motion unit , Service Hours, Post Production as well as some extra facilities.Prices are mentioned in BDT.",
+                "Super Saver" : "12,500~ 25,000",
+                "Standard" : "15,000~ 35,000",
+                "Exclusive" : "50,000 ~ 75,000", 
+                "Premium & Signature" : "1,25,000 ~ 2,00,000"
+            },
+            {
+                "Photography": "Photography is the main attraction of photoHolic, Service Hours, Number of prints as well as some extra facilities.Prices are mentioned in BDT",
+                 "Super Saver" : "12,500~ 22,500",
+                 "Standard" : "30,000~ 40,000",
+                 "Elegant" : "40,000 ~ 1,00,000",
+                 "Exclusive" : "55,000 ~ 75,000",
+                 "Premium & Signature" : "1,00,000 ~ 2,25,000"
+            }
+        ]
+    },
+    {
+        "service_id": "08",
+        "title": "Wild photography",
+        "img": "https://images.unsplash.com/photo-1572729935765-bc2f5af2948e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+        "price": "20.00",
+        "rating" : "4.7",
+        "description": "Wildlife photography is a genre of photography concerned with documenting various forms of wildlife in their natural habitat.Wildlife photography is a loosely-defined profession which demands a passion for nature and art.",
+        "facility": [
+            {
+                "cinematography":"Cinematography Services are also available ,  Additional Motion unit , Service Hours, Post Production as well as some extra facilities.Prices are mentioned in BDT.",
+                "Super Saver" : "12,500~ 25,000",
+                "Standard" : "15,000~ 35,000",
+                "Exclusive" : "50,000 ~ 75,000", 
+                "Premium & Signature" : "1,25,000 ~ 2,00,000"
+            },
+            {
+                "Photography": "Photography is the main attraction of photoHolic, Service Hours, Number of prints as well as some extra facilities.Prices are mentioned in BDT",
+                 "Super Saver" : "12,500~ 22,500",
+                 "Standard" : "30,000~ 40,000",
+                 "Elegant" : "40,000 ~ 1,00,000",
+                 "Exclusive" : "55,000 ~ 75,000",
+                 "Premium & Signature" : "1,00,000 ~ 2,25,000"
+            }
+        ]
+    }
+]
