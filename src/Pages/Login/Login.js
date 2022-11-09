@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import img from "../../assets/images/login/login.jpg";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import { GoogleAuthProvider } from "firebase/auth";
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
-
+  const { signIn, providerLogin } = useContext(AuthContext);
+  const googleProvider = new GoogleAuthProvider();
   const handleLogin = (event) => {
     event.preventDefault();
 
@@ -20,6 +21,16 @@ const Login = () => {
         form.reset();
       })
       .catch((err) => console.error(err));
+  };
+  const handleGoogleSignIn = () => {
+    providerLogin(googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((e) => {
+        console.error(e);
+      });
   };
   return (
     <div>
@@ -47,7 +58,7 @@ const Login = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
@@ -65,6 +76,12 @@ const Login = () => {
                   value="Login"
                 />
               </div>
+              <button
+                className="btn btn-outline btn-info font-bold"
+                onClick={handleGoogleSignIn}
+              >
+                Login with Google
+              </button>
             </form>
             <p className="text-center">
               New to PhotoHolic?{" "}
