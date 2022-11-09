@@ -3,8 +3,8 @@ import React from "react";
 const ServiceCard = ({ service }) => {
   const { title, img, price, rating, description } = service;
   return (
-    <div>
-      <div className="card card-compact w-96 bg-base-100 shadow-xl my-12">
+    <div className="">
+      <div className="card card-compact w-96 bg-base-100 shadow-xl my-12 ">
         <figure>
           <img className="w-96 h-96" src={img} alt="Shoes" />
         </figure>
