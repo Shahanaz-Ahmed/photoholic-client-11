@@ -4,6 +4,8 @@ import Home from "../../Pages/Home/Home/Home";
 import IndividualService from "../../Pages/Home/Services/IndividualService/IndividualService";
 import Services from "../../Pages/Home/Services/Services";
 import Login from "../../Pages/Login/Login";
+import MyReview from "../../Pages/Review/MyReview";
+import Review from "../../Pages/Review/Review";
 import SignUp from "../../Pages/SignUp/SignUp";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -39,6 +41,20 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/services/${params.id}`),
       },
+      {
+        path: "/reviews/:id",
+        element: <Review></Review>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/services/${params.id}`),
+      },
+      {
+        path: "/myreview",
+        element: <MyReview></MyReview>,
+      },
+      // {
+      //   path: "/individualservice",
+      //   element: <IndividualService></IndividualService>,
+      // },
     ],
   },
 ]);
