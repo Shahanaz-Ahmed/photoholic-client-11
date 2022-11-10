@@ -4,7 +4,12 @@ import logo from "../../../assets/logo.png";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch();
+  };
   const menuItems = (
     <>
       <li className="font-semibold text-2xl">
@@ -13,6 +18,9 @@ const Header = () => {
         {user?.email ? (
           <>
             <Link to="/myreview">My Review</Link>
+            <Link to="/logout">
+              <button onClick={handleLogOut}>Logout</button>
+            </Link>
           </>
         ) : (
           <Link to="/login">Login</Link>

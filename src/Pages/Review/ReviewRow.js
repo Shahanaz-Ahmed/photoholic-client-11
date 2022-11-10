@@ -27,7 +27,10 @@ const ReviewRow = ({ review }) => {
               <div className="mask mask-squircle w-12 h-12">
                 {user?.img && (
                   <img
-                    src="/tailwind-css-component-profile-2@56w.png"
+                    src={
+                      user.img ||
+                      "https://t3.ftcdn.net/jpg/03/46/83/96/240_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+                    }
                     alt="Avatar Tailwind CSS Component"
                   />
                 )}{" "}
