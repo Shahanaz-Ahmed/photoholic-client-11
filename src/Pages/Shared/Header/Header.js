@@ -18,9 +18,13 @@ const Header = () => {
         {user?.email ? (
           <>
             <Link to="/myreview">My Review</Link>
-            <Link to="/logout">
+            <Link
+              to="/
+            "
+            >
               <button onClick={handleLogOut}>Logout</button>
             </Link>
+            <Link to="/addservice">Add Services</Link>
           </>
         ) : (
           <Link to="/login">Login</Link>
