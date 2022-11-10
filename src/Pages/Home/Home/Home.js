@@ -4,6 +4,7 @@ import Banner from "../Banner/Banner";
 import img1 from "../../../assets/images/about_us/img1.jpeg";
 import Services from "../Services/Services";
 import HomeService from "../HomeService/HomeService";
+import RecentEventPic from "../RecentEventPic/RecentEventPic";
 
 const Home = () => {
   return (
@@ -31,6 +32,7 @@ const Home = () => {
       </div>
       <About></About>
       <HomeService></HomeService>
+      <RecentEventPic></RecentEventPic>
     </div>
   );
 };
