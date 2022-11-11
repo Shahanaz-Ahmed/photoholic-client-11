@@ -26,11 +26,7 @@ const Services = () => {
           <p key={service._id}>
             <button className="button1 px-5  mx-3 fw-bold">
               {" "}
-              <Link to={`/services/${service._id}`}>
-                {" "}
-                {/* <span className="fw-bold">{i + 1}.</span>
-                {service.title} */}
-              </Link>
+              <Link to={`/services/${service._id}`}> </Link>
             </button>
           </p>
         ))}

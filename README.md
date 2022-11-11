@@ -7,4 +7,4 @@ website link :
 - I have Authenticated user using firebase
 - I have worked on CRUD operation
 - I have used Context API
-- I have JWT Joken for security
+- I have used environment variable

@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import ReviewRow from "./ReviewRow";
 
@@ -24,7 +23,7 @@ const MyReview = () => {
       fetch(`http://localhost:5000/myreviews/${id}`, {
         method: "DELETE",
         headers: {
-          // authorization: `Bearer ${localStorage.getItem("photoHolic")}`,
+          authorization: `Bearer ${localStorage.getItem("photoHolic")}`,
         },
       })
         .then((res) => res.json())
