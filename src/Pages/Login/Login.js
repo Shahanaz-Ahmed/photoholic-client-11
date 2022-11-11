@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import img from "../../assets/images/login/login.jpg";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
+import useTitle from "../../hooks/UseTitle";
 const Login = () => {
+  useTitle("Login");
   const { signIn, providerLogin } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
   const handleLogin = (event) => {

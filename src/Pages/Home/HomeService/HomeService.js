@@ -5,7 +5,7 @@ import ServiceCard from "../Services/ServiceCard";
 const HomeService = () => {
   const [homeServices, setHomeServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/home/services")
+    fetch("https://photoholic-server.vercel.app/home/services")
       .then((res) => res.json())
       .then((data) => setHomeServices(data));
   }, []);

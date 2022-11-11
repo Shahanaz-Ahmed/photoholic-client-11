@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/UseTitle";
 import ReviewRow from "./ReviewRow";
 
 const MyReview = () => {
+  useTitle("My Review");
   const { user, logOut } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
+    fetch(`https://photoholic-server.vercel.app/reviews?email=${user?.email}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("photoHolic")}`,
       },
@@ -20,7 +22,7 @@ const MyReview = () => {
       "Are you sure you want to delete this review?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/myreviews/${id}`, {
+      fetch(`https://photoholic-server.vercel.app/myreviews/${id}`, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${localStorage.getItem("photoHolic")}`,

@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         path: "/individualservice/:id",
         element: <IndividualService></IndividualService>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`https://photoholic-server.vercel.app/services/${params.id}`),
       },
       {
         path: "/reviews/:id",
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`https://photoholic-server.vercel.app/services/${params.id}`),
       },
       {
         path: "/myreviews",
@@ -62,12 +62,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         // loader: ({ params }) =>
-        //   fetch(`http://localhost:5000/reviews?email=${params.email}`),
+        //   fetch(`https://photoholic-server.vercel.app/reviews?email=${params.email}`),
       },
       {
         path: "/update/:id",
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/myreviews/${params.id}`);
+          return fetch(
+            `https://photoholic-server.vercel.app/myreviews/${params.id}`
+          );
         },
         element: <UpdateReview></UpdateReview>,
       },

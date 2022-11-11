@@ -14,7 +14,7 @@ const UpdateReview = () => {
   };
   const handleUpadateReview = (event) => {
     event.preventDefault();
-    fetch(`http://localhost:5000/myreviews/${update._id}`, {
+    fetch(`https://photoholic-server.vercel.app/myreviews/${update._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

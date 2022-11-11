@@ -5,8 +5,10 @@ import img1 from "../../../assets/images/about_us/img1.jpeg";
 import Services from "../Services/Services";
 import HomeService from "../HomeService/HomeService";
 import RecentEventPic from "../RecentEventPic/RecentEventPic";
+import useTitle from "../../../hooks/UseTitle";
 
 const Home = () => {
+  useTitle("Home");
   return (
     <div>
       {/* <Banner></Banner> */}
