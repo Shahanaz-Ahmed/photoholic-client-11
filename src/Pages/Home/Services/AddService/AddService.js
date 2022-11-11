@@ -41,41 +41,43 @@ const AddService = () => {
   return (
     <div>
       <h2 className="fst-italic">Please Add a Service..</h2>
-
-      <form
-        onSubmit={handleService}
-        className="d-flex flex-column justify-content-center align-items-center my-3 px-3 py-5  border shadow-lg rounded-3 bg-light  mx-5"
-      >
-        <div className="row row-cols-1 row-cols-lg-2 gap-4">
+      <form onSubmit={handleService} className="my-24">
+        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
           <input
             name="title"
             type="text"
             placeholder="Service Name"
-            className="input border shadow mx-auto p-3 rounded"
+            className="input input-bordered input-primary w-full"
           />
           <input
-            name="img"
             type="text"
-            placeholder="Photo URL"
-            className="input border shadow mx-auto p-3 rounded"
-          />
-          <input
             name="price"
-            type="text"
             placeholder="Price"
-            className="input border shadow mx-auto p-3 rounded"
+            className="input input-bordered input-primary w-full"
           />
+          <input
+            type="text"
+            name="img"
+            placeholder="PhotoURL"
+            className="input input-bordered input-primary w-full mb-4"
+          />
+        </div>
+        <div className="max-w-screen-2xl mx-auto">
+          {" "}
           <textarea
             name="description"
-            className="input border shadow mx-auto p-3 rounded w-50"
+            className="textarea textarea-primary w-full"
             placeholder="Description"
-            required
           ></textarea>
+          <div className="flex justify-center my-4">
+            <input
+              className=" btn btn-primary"
+              type="submit"
+              value="Add Service"
+            />
+          </div>
         </div>
       </form>
-      <button className="button1 px-5  mx-3 fw-bold my-3 border shadow">
-        Add Service
-      </button>
     </div>
   );
 };
