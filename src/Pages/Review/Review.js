@@ -8,12 +8,12 @@ const Review = () => {
 
   const { user } = useContext(AuthContext);
 
-  const handlePlaceOrder = (event) => {
+  const handlePlaceReview = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = `${form.firstName.value} ${form.lastName.value}`;
-    const phone = form.phone.value;
-    const email = form.email.value;
+    const photoURL = form.photoURL.value;
+    const email = user?.email || "unregistered";
     const reviewplace = form.reviewplace.value;
 
     const review = {
@@ -21,7 +21,7 @@ const Review = () => {
       serviceName: title,
       reviewer: name,
       email,
-      phone,
+      photoURL,
       reviewplace,
     };
 
@@ -29,6 +29,8 @@ const Review = () => {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        //localstorage
+        authorization: `Bearer ${localStorage.getItem("phoyoHolic")}`,
       },
       body: JSON.stringify(review),
     })
@@ -46,7 +48,7 @@ const Review = () => {
   return (
     <div>
       <h2 className="text-2xl font-bold text-center">Category: {title}</h2>
-      <form onSubmit={handlePlaceOrder} className="my-24">
+      <form onSubmit={handlePlaceReview} className="my-24">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* <h2>service name:{title}</h2> */}
           <input
@@ -69,8 +71,8 @@ const Review = () => {
           />
           <input
             type="text"
-            name="phone"
-            placeholder="Your Phone"
+            name="photoURL"
+            placeholder="PhotoURL"
             className="input input-bordered input-primary w-full mb-4"
           />
         </div>
@@ -82,13 +84,13 @@ const Review = () => {
             placeholder="Review"
           ></textarea>
           <div className="flex justify-center my-4">
-            <Link to="/myreview">
-              <input
-                className=" btn btn-primary"
-                type="submit"
-                value="Give Your Valuable Review"
-              />
-            </Link>
+            {/* <Link to="/myreview"> */}
+            <input
+              className=" btn btn-primary"
+              type="submit"
+              value="Give Your Valuable Review"
+            />
+            {/* </Link> */}
           </div>
         </div>
       </form>

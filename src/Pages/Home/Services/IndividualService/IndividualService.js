@@ -3,19 +3,23 @@ import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../../context/AuthProvider/AuthProvider";
 import Review from "../../../Review/Review";
 import ReviewRow from "../../../Review/ReviewRow";
+import SingleReview from "../../../Review/SingleReview";
 
 const IndividualService = () => {
   const { user } = useContext(AuthContext);
+  const services = useLoaderData();
+  console.log(services);
   const { _id, title, img, description, price, rating, facility } =
     useLoaderData();
 
-  const [reviews, setReviews] = useState([]);
+  // const [reviews, setReviews] = useState([]);
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
-  }, [user?.email]);
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/reviews?service_id=${services?._id}`)
+  //     // fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setReviews(data));
+  // }, [user?.email]);
 
   // console.log(reviews);
 
@@ -40,31 +44,8 @@ const IndividualService = () => {
         </div>
       </div>
       <h2 className="mt-12 text-center text-5xl font-bold">Review Section</h2>
-
       <div>
-        <h2 className="text-5xl">You Have {reviews.length} reviews</h2>
-        <div className="overflow-x-auto w-full">
-          <table className="table w-full">
-            <thead>
-              <tr>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Favorite Color</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {reviews.map((review) => (
-                <ReviewRow key={review._id} review={review}></ReviewRow>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <SingleReview></SingleReview>
       </div>
 
       <div className="flex justify-center my-4">

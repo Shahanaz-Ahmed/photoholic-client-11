@@ -14,47 +14,32 @@ const ReviewRow = ({ review }) => {
       .then((data) => setReviewService(data));
   }, [service]);
   return (
-    <div>
-      <tr>
-        <th>
-          <label>
-            <button className="btn btn-ghost">X</button>
-          </label>
-        </th>
-        <td>
-          <div className="flex items-center space-x-3">
-            <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
-                {user?.img && (
-                  <img
-                    src={
-                      user.img ||
-                      "https://t3.ftcdn.net/jpg/03/46/83/96/240_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-                    }
-                    alt="Avatar Tailwind CSS Component"
-                  />
-                )}{" "}
-              </div>
-            </div>
-            <div>
-              <div className="font-bold">{serviceName}</div>
-              <div className="text-sm opacity-50">{reviewer}</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          {reviewplace}
-          <br />
-          <span className="badge badge-ghost badge-sm">
-            Desktop Support Technician
-          </span>
-        </td>
-        <td>Purple</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
-      </tr>
-    </div>
+    // <table className="table w-full max-w-screen-2xl mx-auto">
+    //   <tbody>
+    <tr>
+      <th>
+        <label>
+          <button className="btn btn-ghost">X</button>
+        </label>
+      </th>
+      <th>
+        <img
+          style={{ height: "50px" }}
+          data-toggle="tooltip"
+          roundedCircle
+          title={review?.reviewer}
+          src={review?.photoURL}
+          alt=""
+        ></img>
+      </th>
+      <th>{review?.reviewer}</th>
+      <th>{review?.email}</th>
+      <th>{review?.serviceName}</th>
+      <th>{review?.reviewplace}</th>
+      <th></th>
+    </tr>
+    //   </tbody>
+    // </table>
   );
 };
 
