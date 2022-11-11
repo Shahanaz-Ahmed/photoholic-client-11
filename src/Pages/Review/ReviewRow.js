@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
-const ReviewRow = ({ review, handleDelete }) => {
+const ReviewRow = ({ review, handleDelete, handleUpdateChange }) => {
   const { user } = useContext(AuthContext);
   const { _id, email, reviewer, reviewplace, serviceName, service } = review;
 
@@ -15,8 +15,6 @@ const ReviewRow = ({ review, handleDelete }) => {
       .then((data) => setReviewService(data));
   }, [_id]);
   return (
-    // <table className="table w-full max-w-screen-2xl mx-auto">
-    //   <tbody>
     <tr>
       <th>
         <label>
@@ -39,17 +37,22 @@ const ReviewRow = ({ review, handleDelete }) => {
       <th>{review?.reviewplace}</th>
       <th>
         <Link to={`/update/${_id}`}>
-          <button className="btn btn-info border">update</button>
-          <label>
-            &nbsp;
-            <button
-              onClick={() => handleDelete(_id)}
-              className="btn btn-info border"
-            >
-              Delete
-            </button>
-          </label>
+          <button
+            onClick={() => handleUpdateChange(_id)}
+            className="btn btn-primary border"
+          >
+            update
+          </button>
         </Link>
+        <label>
+          &nbsp;
+          <button
+            onClick={() => handleDelete(_id)}
+            className="btn btn-primary border"
+          >
+            Delete
+          </button>
+        </label>
       </th>
     </tr>
   );

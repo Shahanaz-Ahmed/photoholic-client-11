@@ -16,6 +16,29 @@ const MyReview = () => {
       .then((data) => setReviews(data));
   }, [user?.email]);
 
+  const handleDelete = (id) => {
+    const proceed = window.confirm(
+      "Are you sure you want to delete this review?"
+    );
+    if (proceed) {
+      fetch(`http://localhost:5000/myreviews/${id}`, {
+        method: "DELETE",
+        headers: {
+          // authorization: `Bearer ${localStorage.getItem("photoHolic")}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            alert("deleted successfully");
+            const remaining = reviews.filter((odr) => odr._id !== id);
+            setReviews(remaining);
+          }
+        });
+    }
+  };
+
   return (
     <div>
       {reviews.length ? (
@@ -38,7 +61,11 @@ const MyReview = () => {
             </thead>
             <tbody>
               {reviews.map((review) => (
-                <ReviewRow key={review._id} review={review}></ReviewRow>
+                <ReviewRow
+                  key={review._id}
+                  review={review}
+                  handleDelete={handleDelete}
+                ></ReviewRow>
               ))}
             </tbody>
           </table>
