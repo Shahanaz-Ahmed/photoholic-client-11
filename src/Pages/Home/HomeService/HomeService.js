@@ -15,12 +15,14 @@ const HomeService = () => {
         <p className="text-2xl font-bold">Services</p>
         <h2 className="text-5xl font-semibold">Our Service Area</h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 max-w-screen-2xl mx-auto sm:place-items-center">
-        {homeServices.map((service) => (
-          <ServiceCard key={service._id} service={service}></ServiceCard>
-        ))}
+      <div className="flex justify-center items-center">
+        <div className="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3">
+          {homeServices.map((service) => (
+            <ServiceCard key={service._id} service={service}></ServiceCard>
+          ))}
+        </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-16">
         <Link className="place-items-center" to="/services">
           <button className="btn btn-primary py-4 px-24">See All</button>
         </Link>

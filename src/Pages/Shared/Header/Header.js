@@ -35,7 +35,7 @@ const Header = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 px-12 h-20 my-12 mx-auto">
+    <div className="navbar bg-base-100 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -61,7 +61,7 @@ const Header = () => {
             {menuItems}
           </ul>
         </div>
-        <img className="ml-24" src={logo} alt="" />
+        <img className="lg:ml-24" src={logo} alt="" />
         <Link to="/" className="btn btn-ghost normal-case text-4xl font-bold">
           PhotoHolic
         </Link>
@@ -69,11 +69,6 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
-      {/* <div className="navbar-end">
-        <a href="/" className="btn">
-          Get started
-        </a>
-      </div> */}
     </div>
   );
 };

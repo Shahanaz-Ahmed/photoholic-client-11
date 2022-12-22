@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/images/login/login.jpg";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
@@ -7,6 +7,10 @@ import useTitle from "../../hooks/UseTitle";
 const Login = () => {
   useTitle("Login");
   const { signIn, providerLogin } = useContext(AuthContext);
+  //
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   const googleProvider = new GoogleAuthProvider();
   const handleLogin = (event) => {
     event.preventDefault();
@@ -20,6 +24,26 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        const currentUser = {
+          email: user.email,
+        };
+        console.log(currentUser);
+
+        //jet token
+        // fetch("https://photoholic-server.vercel.app/jwt", {
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            localStorage.setItem("moment-token", data.token);
+            navigate(from, { replace: true });
+          });
         form.reset();
       })
       .catch((err) => console.error(err));
@@ -35,13 +59,13 @@ const Login = () => {
       });
   };
   return (
-    <div>
-      <div className="hero w-full my-20">
-        <div className="hero-content  grid gap-20 md:grid-cols-2 flex-col lg:flex-row sm:place-items-center">
+    <div className="w-full">
+      <div className="hero my-16 grid grid-cols-1">
+        <div className="hero-content grid  md:grid-cols-2 flex-col lg:flex-row sm:place-items-center">
           <div className="text-center lg:text-left">
             <img className="" src={img} alt="" />
           </div>
-          <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 p-12 m-12">
+          <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100 lg:p-12 lg:m-12">
             <h1 className="text-5xl font-bold text-center">Login</h1>
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
@@ -85,7 +109,7 @@ const Login = () => {
                 Login with Google
               </button>
             </form>
-            <p className="text-center">
+            <p className="text-center mb-6">
               New to PhotoHolic?{" "}
               <Link className="text-blue-800 font-bold" to="/signup">
                 Sign up

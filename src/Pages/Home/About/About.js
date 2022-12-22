@@ -1,15 +1,15 @@
 import React from "react";
-import useTitle from "../../../hooks/UseTitle";
+// import useTitle from "../../../hooks/UseTitle";
 import Banner from "../Banner/Banner";
 
 const About = () => {
   return (
     <div className="hero bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="w-1/2 min-h-sm rounded-lg shadow-2xl">
+        <div className="lg:w-1/2 rounded-lg shadow-2xl">
           <Banner></Banner>
         </div>
-        <div className="w-1/2 px-5">
+        <div className="lg:w-1/2 px-5">
           <h1 className="text-5xl font-bold">About PhotoHolic</h1>
           <p className="py-6 text-3xl">
             I'm not just your photographer - I'm your friend. Nothing is more

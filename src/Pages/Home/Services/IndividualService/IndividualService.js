@@ -1,35 +1,22 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
-import { AuthContext } from "../../../../context/AuthProvider/AuthProvider";
-import Review from "../../../Review/Review";
-import ReviewRow from "../../../Review/ReviewRow";
+// import { AuthContext } from "../../../../context/AuthProvider/AuthProvider";
 import SingleReview from "../../../Review/SingleReview";
 
 const IndividualService = () => {
-  const { user } = useContext(AuthContext);
+  // const { user } = useContext(AuthContext);
   const services = useLoaderData();
   console.log(services);
   const { _id, title, img, description, price, rating, facility } =
     useLoaderData();
 
-  // const [reviews, setReviews] = useState([]);
-
-  // useEffect(() => {
-  //   fetch(`https://photoholic-server.vercel.app/reviews?service_id=${services?._id}`)
-  //     // fetch(`https://photoholic-server.vercel.app/reviews?email=${user?.email}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setReviews(data));
-  // }, [user?.email]);
-
-  // console.log(reviews);
-
   return (
-    <div className="max-w-screen-2xl mx-auto mb-24">
+    <div className="max-w-screen-2xl mb-24 mx-6">
       <div className="card lg:card-side bg-base-100 shadow-xl">
-        <figure className="w-1/2 h-full">
+        <figure className="lg:w-1/2 h-full">
           <img className="" src={img} alt="Album" />
         </figure>
-        <div className="card-body w-1/2">
+        <div className="card-body lg:w-1/2">
           <h2 className="card-title font-bold">{title}</h2>
           <p className="text-xl">{description}</p>
           <p>Price: {price}</p>

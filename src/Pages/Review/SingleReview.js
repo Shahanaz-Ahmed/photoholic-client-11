@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import ReviewRow from "./ReviewRow";
+// import ReviewRow from "./ReviewRow";
 
 const SingleReview = () => {
   const services = useLoaderData();
@@ -20,10 +20,10 @@ const SingleReview = () => {
         <ReviewRow></ReviewRow>
       </div> */}
       <div className="m-5 border shadow">
-        <h2 className="my-2 py-3">
+        <h2 className="my-2 py-3 text-center">
           Reviews of <b>{services?.title}</b>
         </h2>
-        <div className="overflow-x-auto w-full">
+        <div className="overflow-x-auto grid grid-cols-1">
           <table className="table w-full">
             <thead>
               <tr>

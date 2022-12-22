@@ -21,13 +21,13 @@ const SignUp = () => {
       .catch((err) => console.error(err));
   };
   return (
-    <div>
-      <div className="hero w-full my-20">
+    <div className="">
+      <div className="hero w-full my-20 grid grid-cols-1">
         <div className="hero-content  grid gap-20 md:grid-cols-2 flex-col lg:flex-row sm:place-items-center">
           <div className="text-center lg:text-left">
             <img className="" src={img} alt="" />
           </div>
-          <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 p-12 m-12">
+          <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 lg:p-12 lg:m-12">
             <h1 className="text-5xl font-bold text-center">Sign Up</h1>
             <form onSubmit={handleSignUp} className="card-body">
               <div className="form-control">
@@ -84,7 +84,7 @@ const SignUp = () => {
                 />
               </div>
             </form>
-            <p className="text-center">
+            <p className="text-center mb-4">
               ALready have an account?{" "}
               <Link className="text-blue-800 font-bold" to="/login">
                 Login

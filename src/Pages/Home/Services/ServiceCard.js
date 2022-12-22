@@ -4,14 +4,15 @@ import "react-photo-view/dist/react-photo-view.css";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const ServiceCard = ({ service }) => {
-  const { _id, title, img, price, rating, description } = service;
+  const { _id, title, img, price, description } = service;
   return (
-    <div className="">
-      <div className="card card-compact w-96 bg-base-100 shadow-xl my-12 ">
+    // <div className="w-full h-full">
+    <div className="w-full h-full pb-8">
+      <div className="card shadow-xl my-12 gap-4 lg:ml-6 md:ml-6 h-full">
         <figure>
           <PhotoProvider>
             <PhotoView src={img}>
-              <img className="w-96 h-96" src={img} alt="Shoes" />
+              <img className="w-full h-96" src={img} alt="Shoes" />
             </PhotoView>
           </PhotoProvider>
         </figure>
@@ -35,6 +36,7 @@ const ServiceCard = ({ service }) => {
         </div>
       </div>
     </div>
+    // </div>
   );
 };
 

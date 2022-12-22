@@ -1,8 +1,6 @@
 import React from "react";
 import About from "../About/About";
-import Banner from "../Banner/Banner";
 import img1 from "../../../assets/images/about_us/img1.jpeg";
-import Services from "../Services/Services";
 import HomeService from "../HomeService/HomeService";
 import RecentEventPic from "../RecentEventPic/RecentEventPic";
 import useTitle from "../../../hooks/UseTitle";
@@ -15,7 +13,7 @@ const Home = () => {
       <div
         className="hero min-h-screen"
         style={{
-          backgroundImage: `url("https://images.unsplash.com/photo-1554080353-321e452ccf19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")`,
+          backgroundImage: `url(${img1})`,
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
